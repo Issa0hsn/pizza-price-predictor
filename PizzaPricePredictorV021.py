@@ -66,7 +66,7 @@ def grad(w,b,x,y,n,a):
 #print(grad(w,b,scaled_x,y_train,n,0.1))
 alpha=0.3
 scale=10
-print(cost_func(w,b,y_train,scaled_x,n))        
+  
 history_cost.append(cost_func(w,b,y_train,scaled_x,n))
 for i in range(10000):
     w,b=grad(w,b,scaled_x,y_train,n,alpha)
@@ -74,7 +74,7 @@ for i in range(10000):
         history_cost.append(cost_func(w,b,y_train,scaled_x,n))
         iteration.append(i)
     
-print(cost_func(w,b,y_train,scaled_x,n))     
+  
 
 plt.scatter(pre_func(scaled_x,w,b),y_train, label='خط', color='red', linewidth=2)
 plt.xlabel('prediction')
@@ -119,3 +119,4 @@ if c.lower()=='y':
     x=[s,p,d]
 
     print(f"Your pizza will cost about {pre_func(x,w,b):.2f}")
+
