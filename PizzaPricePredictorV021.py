@@ -111,10 +111,11 @@ for i in range(3):
 plt.tight_layout() 
 plt.show()
 
-c=input(" :")
+c=input("would you like me  to predicte how much your pizza cost  ?(y/n)\n")
 if c.lower()=='y':
     s=z_score(int(input("Enter size(by square inch ): ")),1)
     p=z_score(int(input("Enter number of pepperoni slices : ")),1)
     d=z_score(int(input("Enter cheese price (by dollar): ")),1)
     x=[s,p,d]
+
     print(f"Your pizza will cost about {pre_func(x,w,b):.2f}")
